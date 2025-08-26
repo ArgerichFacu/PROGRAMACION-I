@@ -1,0 +1,218 @@
+<b>Funciones</b>
+
+    MIENTAS MAS SIMPLES SEAN MEJOR
+    Abstracción fundamental en la programación
+
+     '''
+     tipo_retorno identificador(lista_argumentos)
+     {
+        bloque de instrucciones (cuerpos)
+     }
+     '''
+
+     Una función es un R-VALUE
+
+     '''
+     int resultado =suma(10, 45)
+     int plus = suma(10,30)
+     '''
+
+     Puede no tener salida?
+        Si, y es llamada procedimiento
+        Cuando no devuelve nada, se indica con la palabra reservada "void"
+
+        '''
+        void mi_funcion()
+        {
+            return;
+        }
+        '''
+        '''
+        void muestra_mensaje()
+        {
+            printf("Hola Mundo!\n")
+        }
+        ´´´
+        Las funciones voy son para rutornar resultados para un archivo, no para el usuario.
+    
+    "La utilización de "printf" y "scanf" rompe con las espectativas de que se devuelva una salida.", esto es llamado EFECTOS SECUNDARIOS
+    Por lo tanto, printf y scanf no estan permitidos.
+    '''
+    int leer_entero()
+    {
+        int valor = 0;
+        scanf("pasame un valor entero %d, &valor)
+        return valor;
+    }
+
+    void mostrar_temperatura(double celsius)...
+    '''
+    /*LAS FUNCIONES NO VAN CON PRINTF NI SCANF a no ser que ese sea su proposito*/
+
+    UNA FUNCION PURA ES CUANDO 
+
+    EFECTO PRIMARIO/FUNCION PURA:
+        1- Siempre devuelve el mismo resultado si se le dan los mismos parámetros.
+        2- No produce efectos secundarios (no modifica variables externas, no imprime, no escribe en archivos, etc.).
+        
+    EFECTO SECUNDARIO:
+        Depende de algo que !!! 
+
+Como una oficiona
+    Uno pide un tramite y luego recibe un retorno. Resive entradas (una o varias), se hacen cambios y se obtiene una salida.
+
+Una abstracción fundamental en programación
+    coceptualmente es algo que entra y algo que sale. Un dominio y una imagen.
+
+Entrada
+    '''tipo identificador_funcion(tipo nombre, ...)'''
+    ´
+    de entrada "nombre" se pueden igresar todos lo necesarios y separados con coma
+
+Salida
+    Se declara solo UN "tipo"
+    ´´´return variable;´´´
+
+Ej
+'''int suma (in op1, int op2)
+{
+    int resultado =sumando +sumador;
+    returnt resultado;
+}
+
+SCOPES 1
+    Que es una variable global?
+
+    '''
+    int uno = 0x0FE0;
+    void funcion(int dos)
+    {
+        int tres = 0xBEEF;
+        {
+            int cuatro = 0xCAFE;
+        }
+    }
+    '''
+    '''
+    int uno = 0x0FE0
+    int dos = void
+    int tres = 0XBEEF
+    int tres = 0XCAFE
+    '''
+    
+    ´´´
+    int uno = 5 
+
+ENCADENADO
+    una funcion puede llamar a otra
+
+    '''
+    void funcion_1()
+    {
+        funcion_2();
+    }
+
+    void funcion_2();
+    {
+        funcion_1();
+    }
+    '''
+PROTOTIPOS
+    Es la funcion definida pero sin cuerpo
+    '''
+    void mi:funcion();
+    '''
+    '''
+    void funcion_1();
+    void funcion_2();
+
+    void funcion_1()
+    {
+        funcion_2();
+    }
+
+    void funcion_2()
+    {
+        funcion_1();
+    }
+    '''
+    '''
+    void saludo;    # Es necesario #
+
+    int main()
+    {
+        saludo();    # Porque se usa antes de su implementación #
+        return 0;
+    }
+
+    void saludo()
+    {
+        printf("Hola Mundo")
+    }
+    '''
+
+Que es la documentación?
+    Todas las funciones con documentación completa.
+    "Aduana en cada función"
+
+Documentación completa:
+############################################################
+/*
+* Esta funcion se encarga de sumar dos numeros enteros
+*
+*@param izquierdo el primer operando
+*@param derecho el operando que será sumando el izquierdo
+*@return la suma de ambos parametros
+*/
+int suma(int izquierdo, int derecho)
+############################################################
+
+    ¿Por que?
+        Ayuda a entender las responsabilidades de un programa 
+        Y aquellas funciones que terminan describiendo con "y"
+        probablemente sean dos funciones
+
+*Siempre que sea posible una responsabilidad por función, al describir los argumentos y retorno
+
+Valores compartidos
+
+'''
+int incremento (int numero)
+{
+    static int veces;
+    veces = veces + 1;
+    printf("llamamos %d veces \n", veces);
+    return veces?;
+}
+'''
+'''
+static int veces;
+veces = veces + 1;
+primer("*** DEBUG - se llamo %d veces \n", veces)
+'''
+
+USOS LIMITADOS Y CONTRAS GRANDES
+
+Todos los argumentos pasan por copia
+
+El triangulo de la documención 
+    El objetivo de la documentación
+        que es el código en sí
+    Por que 
+        Los comentarios
+    Como
+        El contexto
+
+Tips Documentación.
+    - Escriban la documentación antes de programar
+    - Mantener la prosa incluyendo el identificado del argumento y de la función.
+    - Sin repetir lo que está en el código (el tipo, el identificador, por ejemplo).
+    - Cambien los identificadores si quedan en una mejor prosa al documentar.
+    - Manténganla actualizada.
+    - Indiquen qué valores son (y no) válidos (Divisor en 0 en división).
+    - Describan la salida.
+    - Indiquen explícitamente todos los retornos 'especiales' ((-1 cuando...)(0 cuando está todo bien))
+
+TODAS LAS FUNCIONES TIENEN QUE TENER SU DOCUMENTACIÓN (0x000A)
+
+Revisar la seccion de precondiciones, poscondiciones e invariantes del apunte.
