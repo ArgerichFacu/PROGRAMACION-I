@@ -1,3 +1,13 @@
+/*
+*Ejercicio 13. – Arreglos
+*Empleen el valor de return como int para indicar potenciales fallos, los
+*ítems de este ejercicio deben estar implementados en un solo archivo.
+*-----------------
+*Facundo Argerich
+*ArgerichFacu
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 // prototipos de funciones
