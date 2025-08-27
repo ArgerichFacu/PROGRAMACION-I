@@ -1,5 +1,5 @@
 /*
-*Ejercicio 2. – 
+*Ejercicio 8. – Número defectivo
 *Escribe una función que determine si un número entero positivo es un
 *número defectivo.Un número defectivo o número deficiente es un número n para el que la
 *suma de sus divisores es menor que 2n. De manera equivalente, es un
