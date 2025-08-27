@@ -8,24 +8,30 @@
  * positivos (excluyéndose a sí mismo).
  * 
  * Ejemplos:
- *   - 6  = 1 + 2 + 3   → perfecto
+ *   - 6  = 1 + 2 + 3        → perfecto
  *   - 28 = 1 + 2 + 4 + 7 + 14 → perfecto
- *   - 15 = 1 + 3 + 5   → NO perfecto
- *
+ *   - 15 = 1 + 3 + 5        → NO perfecto
+ * ---------------------------------
  * Autor: Facundo Argerich
- * Usuario: ArgerichFacu
+ * Usuario de git: ArgerichFacu
  */
 
 #include <stdio.h>
 
 /**
- * @brief Verifica si un número es perfecto.
+ * Determina si un número entero es perfecto.
  *
- * Un número perfecto es aquel que es igual a la suma de sus divisores
- * propios positivos (sin contar al mismo número).
+ * Detalles:
+ * - Un número es considerado perfecto si es igual a la suma de 
+ *   sus divisores propios positivos.
+ * - Si el número es menor que 1, no se considera perfecto.
  *
- * @param numero Entero a evaluar.
- * @return int Devuelve 1 si el número es perfecto, 0 en caso contrario.
+ * Ejemplo:
+ *   es_perfecto(6) → 1
+ *   es_perfecto(10) → 0
+ *
+ * @param numero Número entero a evaluar.
+ * @return 1 si el número es perfecto, 0 en caso contrario.
  */
 int es_perfecto(int numero);
 
@@ -48,17 +54,6 @@ int main()
     return 0;
 }
 
-/**
- * @brief Función que determina si un número es perfecto.
- *
- * @param numero Número entero a comprobar.
- * @return int 1 si el número es perfecto, 0 en caso contrario.
- *
- * Detalles:
- * - Si el número es menor que 1, retorna 0 directamente.
- * - Calcula la suma de todos los divisores propios positivos de "numero".
- * - Compara la suma con el número original.
- */
 int es_perfecto(int numero)  
 {
     int suma = 0;
@@ -69,10 +64,12 @@ int es_perfecto(int numero)
         return 0; 
     }
 
-    for (i = 1; i < numero; i++) {
+    for (i = 1; i < numero; i++) 
+    {
         if (numero % i == 0) {
             suma += i;
         }
     }
+
     return suma == numero;
 }
