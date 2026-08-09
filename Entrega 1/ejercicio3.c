@@ -10,12 +10,12 @@ Github: ArgerichFacu
 
 int main ()
 {
-    int n = 0;
+    int num = 0;
 
     printf("Ingrese un numero entero: \n");
-    scanf("%d", &n);
-
-    if ((n % 2) == 0)
+    scanf("%d", &num); 
+    
+    if ((num % 2) == 0)
     {
         printf("El numero es par");
     }
