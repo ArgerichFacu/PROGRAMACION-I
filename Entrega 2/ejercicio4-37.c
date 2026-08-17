@@ -1,3 +1,4 @@
+
 /*
 Ejercicio 4-37 – Rombo 
 Dibujá un rombo de asteriscos
