@@ -1,3 +1,4 @@
+
 /*
 Ejercicio 4-38 – Tabla de Multiplicar Completa (Pitagórica con cabeceras)
 Mostrá tabla de multiplicar del 1 al 10 (todas las tablas).
