@@ -11,25 +11,26 @@ Github: ArgerichFacu
 
 int main ()
 {
-    int N = 0;
-    int suma = 0;
+    int limite_naturales = 0;
+    int suma_total = 0;
+    int numero_actual = 0;
 
     printf("Ingrese un numero natural: \n");
-    scanf("%d", &N);
+    scanf("%d", &limite_naturales);
 
-    if (N <= 0)
+    if (limite_naturales <= 0)
     {
         printf("Ingrese un numero valido.");
     }
     else
     {
-        for (size_t i = 1; i <= N; i++)
+        for (numero_actual = 1; numero_actual <= limite_naturales; numero_actual++)
         {
-            suma = suma + i;
+            suma_total = suma_total + numero_actual;
         }
     }
     
-    printf("La suma de los primeros %d numeros naturales es: %d\n", N, suma);
+    printf("La suma de los primeros %d numeros naturales es: %d\n", limite_naturales, suma_total);
 
     return 0;
 }

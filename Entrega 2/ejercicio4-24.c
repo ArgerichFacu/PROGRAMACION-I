@@ -9,24 +9,33 @@ Github: ArgerichFacu
 
 #include <stdio.h>
 
-int main ()
+int main(void)
 {
-    int N = 0;
-    int F0 = 0;
-    int F1 = 1;
-    int Fn = 0;
+    int cantidad_terminos = 0;
+    int posicion_actual = 0;
+    unsigned long long termino_previo_1 = 0ULL;
+    unsigned long long termino_previo_2 = 1ULL;
+    unsigned long long termino_actual = 0ULL;
 
-    printf("Ingrese la cantidad de valores Fibonacci: \n");
-    scanf("%d", &N);
+    printf("Ingrese la cantidad de valores Fibonacci: ");
+    scanf("%d", &cantidad_terminos);
+
+    if (cantidad_terminos <= 0)
+    {
+        printf("Error: La cantidad de terminos debe ser mayor a 0.\n");
+        return 0;
+    }
 
     printf("Los valores son:\n");
-    for (size_t i = 0; i < N; i++)
+    for (posicion_actual = 0; posicion_actual < cantidad_terminos; posicion_actual++)
     {
-        Fn = F0 + F1;
-        printf("%d ", F0);
-        F0 = F1,
-        F1 = Fn;
+        printf("%llu ", termino_previo_1);
+
+        termino_actual = termino_previo_1 + termino_previo_2;
+        termino_previo_1 = termino_previo_2;
+        termino_previo_2 = termino_actual;
     }
-    
+
+    printf("\n");
     return 0;
 }

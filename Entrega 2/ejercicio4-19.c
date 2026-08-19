@@ -11,27 +11,27 @@ Github: ArgerichFacu
 
 int main ()
 {
-    int rango_A = 0;
-    int rango_B = 0;
-    int pares = 0;
+    int limite_inferior = 0;
+    int limite_superior = 0;
+    int numero_actual = 0;
     
     printf("Ingrese un rango [A-B] para mostrar los numeros pares dentro del mismo: \n");
 
     printf("Ingrese A: ");
-    scanf("%d", &rango_A);
+    scanf("%d", &limite_inferior);
     printf("Ingrese B: ");
-    scanf("%d", &rango_B);
+    scanf("%d", &limite_superior);
 
-    pares = rango_A;
+    numero_actual = limite_inferior;
 
-    printf("Los valores pares dentro del rango [%d-%d] son:\n", rango_A, rango_B);
-    while (pares <= rango_B)
+    printf("Los valores pares dentro del rango [%d-%d] son:\n", limite_inferior, limite_superior);
+    while (numero_actual <= limite_superior)
     {
-        if ((pares % 2) == 0)
+        if ((numero_actual % 2) == 0)
         {
-            printf("%d ", pares);
+            printf("%d ", numero_actual);
         }
-            pares = pares + 1;
+        numero_actual = numero_actual + 1;
     }
     
     return 0;
